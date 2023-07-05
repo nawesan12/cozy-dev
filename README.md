@@ -11,11 +11,11 @@ Para ejecutar este proyecto son necesarios ciertos pre-requisitos:
 - Visual Studio C++ Build Tools
 - Yarn
 - WebView2
+- Windows 10 o superior
 
 Una vez instalado todo y descargado el repositorio, es necesario ejecutar:
 
-`  yarn
-  yarn dev`
+`yarn && yarn dev`
 
 ### Link de descarga:
 
