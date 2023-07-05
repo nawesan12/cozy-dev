@@ -1,7 +1,7 @@
-# Tauri + Svelte + Typescript
+# Cozy Dev
 
-This template should help get you started developing with Tauri, Svelte and TypeScript in Vite.
+Sistema de organizacion integral para desarrolladores en forma de aplicacion de escritorio desarrollada nativamente en Rust, Typescript y Svelte
 
-## Recommended IDE Setup
+### Link de descarga:
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+[Descargar Cozy Dev]("https://google.com")
