@@ -36,29 +36,29 @@
       "fs": {
         "all": false,
         "copyFile": false,
-        "createDir": false,
+        "createDir": true,
         "exists": false,
-        "readDir": false,
-        "readFile": false,
+        "readDir": true,
+        "readFile": true,
         "removeDir": false,
-        "removeFile": false,
-        "renameFile": false,
-        "scope": [],
-        "writeFile": false
+        "removeFile": true,
+        "renameFile": true,
+        "scope": ["$DOCUMENT", "$TEMP"],
+        "writeFile": true
       },
       "notification": {
         "all": false
       },
       "http": {
         "all": false,
-        "request": false,
+        "request": true,
         "scope": []
       }
     },
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.tauri.dev",
+      "identifier": "com.cozy-dev.dev",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
