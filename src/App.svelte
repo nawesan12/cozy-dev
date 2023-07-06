@@ -7,11 +7,14 @@
   import Notas from "./routes/Notas.svelte";
   import Proyectos from "./routes/Proyectos.svelte";
   import AccessForm from "./lib/AccessForm.svelte";
+  import UniqueNote from "./routes/UniqueNote.svelte";
 
   const user = JSON.parse(localStorage.getItem("cozy-user"));
+
+  let url = "";
 </script>
 
-{#if user != undefined}
+<!-- {#if user != undefined}
   <Layout>
     <Router>
       <Route path="/" component={Home} />
@@ -21,4 +24,13 @@
   </Layout>
 {:else}
   <AccessForm />
-{/if}
+{/if} -->
+
+<Layout>
+  <Router {url}>
+    <Route path="/" component={Home} />
+    <Route path="/notas" component={Notas} />
+    <Route path="/notas/:id" let:params component={UniqueNote} />
+    <Route path="proyectos" component={Proyectos} />
+  </Router>
+</Layout>

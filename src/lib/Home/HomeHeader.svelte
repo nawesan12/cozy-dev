@@ -1,3 +1,7 @@
+<script>
+  const horaActual = new Date().getHours();
+</script>
+
 <header class="bg-gray-50">
   <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
     <div class="flex items-center sm:justify-between sm:gap-4">
@@ -140,7 +144,14 @@
 
     <div class="mt-8">
       <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
-        Buenos dias, Nahuel!
+        {#if horaActual < 14 && horaActual > 7}
+          Buenos dias,
+        {:else if horaActual < 19 && horaActual > 14}
+          Buenas tardes,
+        {:else}
+          Buenas noches,
+        {/if}
+        Nahuel!
       </h1>
 
       <p class="mt-1.5 text-sm text-gray-500">

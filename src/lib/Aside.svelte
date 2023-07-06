@@ -1,9 +1,19 @@
+<script>
+  let actualPath = location.pathname;
+
+  console.log(actualPath);
+</script>
+
 <nav class="p-4 col-span-2">
-  <ul class="space-y-4 select-none">
-    <li>
+  <ul class="space-y-4 select-none fixed">
+    <li
+      class={actualPath === "/"
+        ? "bg-blue-300 bg-opacity-70 border-l-2 border-blue-700"
+        : ""}
+    >
       <a
         href="/"
-        class="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-2 text-gray-700"
+        class="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-950"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -25,14 +35,18 @@
           />
         </svg>
 
-        <span class="text-sm font-medium"> Inicio</span>
+        <span class="text-md font-medium"> Inicio</span>
       </a>
     </li>
 
-    <li>
+    <li
+      class={actualPath === "/amigos"
+        ? "bg-blue-300 bg-opacity-70 border-l-2 border-blue-700"
+        : ""}
+    >
       <details class="group [&_summary::-webkit-details-marker]:hidden">
         <summary
-          class="group flex items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+          class="group flex items-center justify-between rounded-lg px-4 py-2 text-black hover:bg-gray-100 hover:text-gray-950"
         >
           <div class="flex items-center gap-2">
             <svg
@@ -50,39 +64,32 @@
               />
             </svg>
 
-            <span class="text-sm font-medium"> Friends </span>
+            <span class="text-md font-medium"> Friends </span>
           </div>
-
-          <span class="shrink-0 transition duration-300 group-open:-rotate-180">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </span>
         </summary>
 
         <ul class="mt-2 space-y-1 px-4">
-          <li>
+          <li
+            class={actualPath === "/hola"
+              ? "bg-blue-300 bg-opacity-70 border-l-2 border-blue-700"
+              : ""}
+          >
             <a
               href=""
-              class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+              class="block rounded-lg px-4 py-2 text-md font-medium text-black hover:bg-gray-100 hover:text-gray-950"
             >
               Banned Users
             </a>
           </li>
 
-          <li>
+          <li
+            class={actualPath === "/explorar"
+              ? "bg-blue-300 bg-opacity-5 border-blue-700"
+              : ""}
+          >
             <a
               href=""
-              class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+              class="block rounded-lg px-4 py-2 text-md font-medium text-black hover:bg-gray-100 hover:text-gray-950"
             >
               Calendar
             </a>
@@ -91,10 +98,14 @@
       </details>
     </li>
 
-    <li>
+    <li
+      class={actualPath === "/notas"
+        ? "bg-blue-300 bg-opacity-70 border-l-2 border-blue-700"
+        : ""}
+    >
       <a
         href="/notas"
-        class="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+        class="flex items-center gap-2 rounded-lg px-4 py-2 text-black hover:bg-gray-100 hover:text-gray-950"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -111,14 +122,18 @@
           />
         </svg>
 
-        <span class="text-sm font-medium"> Notas </span>
+        <span class="text-md font-medium"> Notas </span>
       </a>
     </li>
 
-    <li>
+    <li
+      class={actualPath === "/proyectos"
+        ? "bg-blue-300 bg-opacity-70 border-l-2 border-blue-700"
+        : ""}
+    >
       <a
         href="/proyectos"
-        class="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+        class="flex items-center gap-2 rounded-lg px-4 py-2 text-black hover:bg-gray-100 hover:text-gray-950"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -135,14 +150,18 @@
           />
         </svg>
 
-        <span class="text-sm font-medium"> Proyectos </span>
+        <span class="text-md font-medium"> Proyectos </span>
       </a>
     </li>
 
-    <li>
+    <li
+      class={actualPath === "/perfil"
+        ? "bg-blue-300 bg-opacity-70 border-l-2 border-blue-700"
+        : ""}
+    >
       <details class="group [&_summary::-webkit-details-marker]:hidden">
         <summary
-          class="group flex items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+          class="group flex items-center justify-between rounded-lg px-4 py-2 text-black hover:bg-gray-100 hover:text-gray-950"
         >
           <div class="flex items-center gap-2">
             <svg
@@ -160,49 +179,50 @@
               />
             </svg>
 
-            <span class="text-sm font-medium"> Perfil </span>
+            <span class="text-md font-medium"> Perfil </span>
           </div>
-
-          <span class="shrink-0 transition duration-300 group-open:-rotate-180">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </span>
         </summary>
 
-        <ul class="mt-2 space-y-1 px-4">
-          <li>
+        <ul
+          class={actualPath === "/detalles"
+            ? "bg-blue-300 bg-opacity-5 mt-2 space-y-1 px-4 border-blue-700"
+            : "mt-2 space-y-1 px-4"}
+        >
+          <li
+            class={actualPath === "/perfil"
+              ? "bg-blue-300 bg-opacity-70 border-l-2 border-blue-700"
+              : ""}
+          >
             <a
               href="/perfil"
-              class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+              class="block rounded-lg px-4 py-2 text-md font-medium text-black hover:bg-gray-100 hover:text-gray-950"
             >
               Detalles
             </a>
           </li>
 
-          <li>
+          <li
+            class={actualPath === "/seguridad"
+              ? "bg-blue-300 bg-opacity-5 border-blue-700"
+              : ""}
+          >
             <a
               href="/seguridad"
-              class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+              class="block rounded-lg px-4 py-2 text-md font-medium text-black hover:bg-gray-100 hover:text-gray-950"
             >
               Seguridad
             </a>
           </li>
 
-          <li>
+          <li
+            class={actualPath === "/salir"
+              ? "bg-blue-300 bg-opacity-70 border-l-2 border-blue-700"
+              : ""}
+          >
             <form action="/salir">
               <button
                 type="submit"
-                class="w-full rounded-lg px-4 py-2 text-sm font-medium text-gray-500 [text-align:_inherit] hover:bg-gray-100 hover:text-gray-700"
+                class="w-full rounded-lg px-4 py-2 text-md font-medium text-black [text-align:_inherit] hover:bg-gray-100 hover:text-gray-950"
               >
                 Salir
               </button>
